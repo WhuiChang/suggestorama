@@ -23,3 +23,15 @@ Migrating to CreateTopics (20090613212801)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2009-06-13 14:39:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.1ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Topic with ID=1):
+  app/controllers/topics_controller.rb:16:in `show'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (not_found)
